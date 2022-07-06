@@ -34,6 +34,17 @@ True
 
 >>> cropped_img.show()
 
+# Using the .transpose(), .rotate() method to flip and rotate.
+
+>>> converted_img = img.transpose(Image.FLIP_TOP_BOTTOM)
+>>> converted_img.show()
+
+>>> rotated_img = img.rotate(45)
+>>> rotated_img.show()
+
+>>> rotated_img = img.rotate(45, expand=True)
+>>> rotated_img.show()
+
 >>> low_res_img = cropped_img.resize(
 ...     (cropped_img.width // 4, cropped_img.height // 4)
 ... )
